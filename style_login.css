@@ -1,0 +1,116 @@
+/* ========================================== */
+/* CONTEXTE ET FOND DE PAGE                   */
+/* ========================================== */
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ========================================== */
+/* LA CARTE DE CONNEXION (STYLE ADMIN ARRONDIE)*/
+/* ========================================== */
+.login-page-container {
+    max-width: 420px ;
+    margin: 120px auto 60px auto ; /* Calage parfait sous le header fixe */
+    padding: 40px 35px 35px 35px ;
+    background: #ffffff ;
+    border-radius: 30px; /* Angles très arrondis comme l'inscription */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+    border: none ;
+    position: relative ;
+    box-sizing: border-box ;
+}
+
+/* Le titre transformé en bandeau supérieur Bleu Nuit */
+.login-page-container h2 {
+    font-size: 14px;
+    text-transform: uppercase ;
+    letter-spacing: 1px ;
+    color: #ffffff ;
+    background-color: #111827 ; /* Bleu nuit foncé */
+    margin: -40px -35px 30px -35px ;
+    padding: 18px ;
+    text-align: center ;
+    font-weight: 600 ;
+    border-top-left-radius: 24px ;
+    border-top-right-radius: 24px ;
+    display: block ;
+}
+
+/* ========================================== */
+/* CHAMPS DE SAISIE DE LA PAGE DE CONNEXION   */
+/* ========================================== */
+.login-page-container form input {
+    width: 100% ;
+    padding: 14px 18px ;
+    margin-bottom: 18px ;
+    border: 1px solid #e2e8f0 ;
+    border-radius: 14px ; /* Inputs arrondis harmonieux */
+    font-size: 14px ;
+    color: #1f2937 ;
+    background-color: #f9fafb ;
+    box-sizing: border-box ;
+    transition: all 0.2s ease-in-out ;
+    outline: none ;
+}
+.login-page-container form label{
+    color:rgba(59, 130, 246, 0.1)
+}
+
+/* Focus avec halo bleu */
+.login-page-container form input:focus {
+    border-color: #3b82f6 ;
+    background-color: #ffffff ;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+.login-page-container form label{
+    color: black;
+}
+.login-page-container form p{
+    color: black;
+    text-align: center;
+    margin: 10px
+}
+.login-page-container form a{
+    margin: 10px;
+    text-decoration: none;
+}
+.login-page-container form a:hover{
+    color:#111827;
+    text-decoration: underline;
+}
+/*Bouton creer nouveau compte*/
+
+
+/* ========================================== */
+/* BOUTON SE CONNECTER (STYLE CARD)           */
+/* ========================================== */
+.login-page-container form button {
+    width: 100% ;
+    padding: 14px ;
+    background-color: #111827 ; /* Même bleu nuit que le titre */
+    color: #ffffff ;
+    border: none ;
+    border-radius: 14px ;
+    font-size: 15px ;
+    font-weight: 600 ;
+    cursor: pointer ;
+    transition: background-color 0.2s ease;
+    margin-top: 10px ;
+    display: block ;
+}
+
+.login-page-container form button:hover {
+    background-color: #1f2937 ;
+}
+
+/* ========================================== */
+/* MESSAGE ERREUR INTERNE                     */
+/* ========================================== */
+.login-error-text {
+    display: block ;
+    color: #ef4444 ;
+    font-size: 13px ;
+    text-align: center ;
+    margin-top: 18px ;
+    font-weight: 500 ;
+}

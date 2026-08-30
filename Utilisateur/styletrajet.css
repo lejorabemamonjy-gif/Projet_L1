@@ -1,0 +1,85 @@
+/* --- LE TITRE --- */
+.pro-title {
+    background: linear-gradient(180deg, #1e293b 0%, #334155 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Rend le texte transparent pour le dégradé */
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* --- LE FIX POUR TOUS LES STICKERS (Calendrier, Heure, Voiture, etc.) --- */
+.sticker {
+    /* On annule la transparence héritée du titre ou des parents */
+    -webkit-text-fill-color: initial !important; 
+    color: initial !important;
+    
+    /* On annule le dégradé qui pourrait s'appliquer aux icônes */
+    background: none !important;
+    -webkit-background-clip: border-box !important;
+    background-clip: border-box !important;
+
+    /* Style pour l'alignement */
+    display: inline-block;
+    font-size: 1.4rem;
+    margin-right: 10px;
+    vertical-align: middle;
+    
+    /* Force l'affichage des couleurs émojis natives */
+    font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+}
+
+/* --- LE RESTE DU STYLE PRO --- */
+.trajet-wrapper { max-width: 900px; margin: 40px auto; padding: 20px; }
+
+.day-selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 40px;
+    background: #ffffff;
+    width: 100%;
+    padding: 15px;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow-x: auto;
+}
+
+.day-link { text-decoration: none; padding: 12px 20px; border-radius: 1rem; font-weight: 700; color: #64748b; }
+.day-link.active { background: #1e293b; color: #fff; }
+
+.trajet-card {
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border: 1px solid #f1f5f9;
+}
+
+.trajet-info { display: grid; grid-template-columns: 1fr 1fr; gap: 15px 40px; }
+.info-item { font-size: 1rem; color: #475569; display: flex; align-items: center; }
+
+.btn-reserve { padding: 12px 25px; border-radius: 1rem; border: none; font-weight: 800; cursor: pointer; }
+.btn-connected { background: #1e293b; color: white; transition: 0.5s}
+
+.btn-connected:hover {transform: scale(1.02); }
+
+.btn-login { background:#1e293b; color: #d3d6da; transition: 0.5s}
+
+.btn-login:hover {transform: scale(1.02); }
+
+@media (max-width: 768px){
+    .day-selector{
+       overflow-x: auto;
+    }
+    .trajet-card{
+        display: block;
+    }
+}

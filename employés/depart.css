@@ -1,0 +1,149 @@
+/* Réglage des Départs */
+.main-wrapper {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Titre en dégradé */
+.pro-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pro-header h1 {
+    color:#8f0303;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    letter-spacing: -0.02em;
+    margin: 0;
+    position: relative
+}
+.pro-header h1::after{
+    content:"";
+    position:absolute;
+    bottom: 0;
+    right: 350px;
+    height: 5px;
+    width: 150px;
+    background-color:#8f0303;
+    
+}
+
+.accent-line {
+    height: 4px;
+    width: 60px;
+    background-color: #0f172a;
+    margin: 12px auto 0;
+    border-radius: 9999px;
+}
+
+/* Cartes de véhicules */
+.bloc {
+    background: #ffffff;
+    border-radius: 1.5rem;
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.bloc:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.bloc h3 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #64748b;
+    letter-spacing: 0.1em;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.bloc h3::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #e2e8f0;
+    margin-left: 15px;
+}
+
+/* Grille d'alignement des champs */
+.grid-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* Inputs et Selects stylisés */
+input, select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    color: #1e293b;
+    outline: none;
+    transition: all 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: #0f172a;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.08);
+}
+
+/* Zone des boutons */
+.actions {
+    display: flex;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.btn-add {
+    flex: 1;
+    background: #ffffff;
+    color: #475569;
+    border: 2px dashed #cbd5e1;
+    padding: 16px;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: all 0.2s;
+}
+
+.btn-add:hover {
+    border-color: #0f172a;
+    color: #0f172a;
+    background: #f8fafc;
+}
+
+.btn-submit {
+    flex: 1;
+    background: #1f2937; /* Anthracite pro */
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    transition: all 0.3s;
+}
+
+.btn-submit:hover {
+    background: #0f172a;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}

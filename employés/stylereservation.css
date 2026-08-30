@@ -1,0 +1,110 @@
+/* ========================================== */
+/* CONTEXTE GLOBAL DE LA PAGE                 */
+/* ========================================== */
+body {
+    background-color: #0f172A;
+    font-family: 'Segoe UI', system-ui, sans-serif !important;
+    margin: 0;
+    /* CORRIGÉ : Laisse pile l'espace nécessaire pour passer sous le header fixe */
+    padding-top: 0px !important; 
+}
+
+/* ========================================== */
+/* TITRE PRINCIPAL DE LA PAGE                 */
+/* ========================================== */
+h1 {
+   
+    /* CORRIGÉ : Rapproche le titre vers le haut sans excès */
+    text-transform: uppercase;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    text-align: center;
+    font-size: 35px !important;
+    font-weight: 700 !important;
+    color: #8b0909;
+}
+
+/* Aligne proprement le conteneur global sous la barre de navigation si nécessaire */
+header + h1, 
+nav + h1 {
+    margin-top: 10px !important;
+}
+
+/* ========================================== */
+/* CONTENEUR ET CARTES DE RÉSERVATION         */
+/* ========================================== */
+
+/* Modifie l'affichage linéaire en une grille moderne et responsive */
+body > div[style*="border:1px solid #ccc"] {
+    display: none; 
+}
+
+/* Cible précisément les boîtes de réservation générées par le while */
+div[style*="border:1px solid #ccc"][style*="padding:10px"] {
+    max-width: 1060px !important;
+    margin: 15px auto !important;
+    padding: 20px 25px !important;
+    
+    border: 1px solid #e2e8f0 !important; 
+    border-radius: 16px !important; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03) !important;
+    
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 15px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+/* Effet de survol discret sur chaque ligne de réservation */
+div[style*="border:1px solid #ccc"][style*="padding:10px"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06) !important;
+    border-color: #cbd5e1 !important;
+}
+
+/* ========================================== */
+/* STYLE DES LIGNES D'INFORMATIONS            */
+/* ========================================== */
+div[style*="border:1px solid #ccc"] p {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 14px !important;
+    color: #f2f4f7fd !important; 
+    min-width: 160px !important; 
+    flex: 1 !important;
+}
+
+/* Cible spécifiquement le premier paragraphe (Client) pour le mettre en valeur */
+div[style*="border:1px solid #ccc"] p:first-of-type {
+    font-size: 15px !important;
+    color: #f7f8fc !important;
+    flex: 1.5 !important; 
+}
+
+/* Style des étiquettes en gras (b) */
+div[style*="border:1px solid #ccc"] p b {
+    display: block !important; 
+    font-size: 11px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    color: #f8f9fa !important; 
+    margin-bottom: 4px !important;
+    font-weight: 600 !important;
+}
+
+/* ========================================== */
+/* MESSAGE SI AUCUNE RÉSERVATION              */
+/* ========================================== */
+body > p:not(div p) {
+    max-width: 1060px !important;
+    margin: 40px auto !important;
+    padding: 30px !important;
+    background-color: #f1f5f9 !important;
+    color: #f3f5f8 !important;
+    text-align: center !important;
+    border-radius: 12px !important;
+    font-weight: 500 !important;
+    border: 1px dashed #cbd5e1 !important;
+}

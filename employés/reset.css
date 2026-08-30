@@ -1,0 +1,72 @@
+.pro-container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 1.5rem; /* Arrondi 24px identique aux autres pages */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f3f4f6;
+}
+
+.pro-title {
+    background: linear-gradient(180deg, #1e293b 0%, #334155 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    letter-spacing: -0.02em;
+}
+
+.accent-line {
+    height: 4px;
+    width: 60px;
+    background-color: #0f172a;
+    margin-top: 8px;
+    margin-bottom: 30px;
+    border-radius: 9999px;
+}
+
+.text-body {
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* Style des boutons d'action */
+.btn-action {
+    display: inline-block;
+    background-color: #1f2937;
+    color: white !important;
+    padding: 12px 28px;
+    border-radius: 0.75rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.btn-action:hover {
+    background-color: #0f172a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Boîte de remarque/alerte */
+.remarque-box {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8fafc;
+    border-left: 4px solid #64748b;
+    border-radius: 6px;
+}
+
+.remarque-box h2 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #1e293b;
+    margin-bottom: 10px;
+}

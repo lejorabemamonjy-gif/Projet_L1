@@ -1,0 +1,108 @@
+/* ============================================================
+   styleregister.css — Scopé uniquement à #form-register-card
+   ============================================================ */
+
+#form-register-card {
+  background: #ffffff;
+  border-radius: 18px ;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.12) ;
+  padding: 0 ;
+  max-width: 500px;
+  margin: 3rem auto ;
+  overflow: hidden;
+  animation: reg-fadeUp 0.4s ease both;
+}
+
+#form-register-card::before {
+  content: 'INSCRIPTION';
+  display: block;
+  background: #1a2332;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-align: center;
+  padding: 1.4rem 2rem;
+  border-radius: 18px 18px 0 0;
+}
+
+#form-register-card h1 {
+  display: none ;
+}
+
+#form-register-card form {
+  padding: 2rem 2.5rem 2.5rem ;
+  display: flex ;
+  flex-direction: column ;
+}
+
+#form-register-card input[type="text"],
+#form-register-card input[type="email"],
+#form-register-card input[type="password"] {
+  background: #f8fafc ;
+  border: 1.5px solid #e2e8f0 ;
+  border-radius: 14px ;
+  padding: 0.85rem 1.1rem ;
+  font-size: 1rem ;
+  color: #1a2332 ;
+  width: 100%;
+  box-sizing: border-box ;
+  margin-bottom: 1rem;
+  outline: none ;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#form-register-card input::placeholder {
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+#form-register-card input:focus {
+  border-color: #1a2332 ;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(26,35,50,0.1);
+}
+
+#form-register-card button[type="submit"] {
+  background: #1a2332 ;
+  color: #ffffff ;
+  font-size: 1rem ;
+  font-weight: 500;
+  border: none ;
+  border-radius: 14px ;
+  padding: 0.9rem 1rem;
+  width: 100% ;
+  margin-top: 0.25rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#form-register-card button[type="submit"]:hover {
+  background: #111827 ;
+  transform: translateY(-1px);
+}
+
+#form-register-card p.text-red-500 {
+  color: #b5341d ;
+  font-size: 0.85rem ;
+  background: #fdf1ee;
+  border: 1px solid #f0c4bb;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  margin: 0 2.5rem 1.5rem ;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  #form-register-card {
+    margin: 1rem ;
+  }
+  #form-register-card form {
+    padding: 1.5rem ;
+  }
+}
+
+@keyframes reg-fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

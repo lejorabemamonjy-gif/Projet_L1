@@ -1,0 +1,197 @@
+/* =============================================
+   style_auth.css — Login & Inscription unifiés
+   Remplace style_login.css ET styleregister.css
+   CSS pur — aucune dépendance Tailwind
+   ============================================= */
+
+/* ---- Reset & base ---- */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+   background-color: #0f172A;
+    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #111827;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ---- Conteneur centré commun aux deux pages ---- */
+.auth-container {
+    max-width: 500px;
+    margin: 4rem auto 5rem;
+    padding: 0 1rem;
+}
+
+/* ---- Carte principale ---- */
+.auth-card {
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    border: 1px solid #11111180;
+    box-shadow: 0px 0px 18px 3px rgb(0 0 0 / 29%);
+    overflow: hidden;
+}
+
+/* ---- Bandeau supérieur (en-tête de la carte) ---- */
+.auth-card__header {
+    background-color: #1f2937;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.auth-card__logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.auth-card__subtitle {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #94a3b8;
+}
+
+/* ---- Corps du formulaire ---- */
+.auth-card__body {
+    padding: 2rem 2rem 1.75rem;
+}
+
+/* ---- Groupe champ label + input ---- */
+.auth-field {
+    margin-bottom: 1.1rem;
+}
+
+.auth-label {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6b7280;
+    margin-bottom: 0.4rem;
+    margin-left: 0.25rem;
+}
+
+/* ---- Champs de saisie ---- */
+.auth-input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    font-size: 0.9rem;
+    font-family: inherit;
+    color: #111827;
+    background-color: #f9fafb;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.auth-input:focus {
+    border-color: #2563eb;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.auth-input::placeholder {
+    color: #9ca3af;
+}
+
+/* ---- Bouton de soumission ---- */
+.auth-btn {
+    width: 100%;
+    padding: 0.9rem;
+    background-color: #1f2937;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.auth-btn:hover {
+    background-color: #2563eb;
+    transform: translateY(-1px);
+}
+
+.auth-btn:active {
+    transform: translateY(0);
+}
+
+/* ---- Message d'erreur ---- */
+.auth-error {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: #fef2f2;
+    border: 1px solid #fca5a5;
+    border-radius: 0.6rem;
+    color: #991b1b;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ---- Message de succès (flash) ---- */
+.auth-success {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: #ecfdf5;
+    border: 1px solid #6ee7b7;
+    border-radius: 0.6rem;
+    color: #065f46;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ---- Pied de carte : lien vers l'autre page ---- */
+.auth-card__footer {
+    padding: 1rem 2rem 1.5rem;
+    text-align: center;
+    border-top: 1px solid #f3f4f6;
+}
+
+.auth-card__footer p {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.auth-card__footer a {
+    color: #2563eb;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.auth-card__footer a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+    .auth-container {
+        margin-top: 2rem;
+    }
+
+    .auth-card__body {
+        padding: 1.5rem 1.25rem;
+    }
+}

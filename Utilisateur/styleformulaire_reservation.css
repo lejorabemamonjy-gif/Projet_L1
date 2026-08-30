@@ -1,0 +1,273 @@
+/* =============================================
+   style_passager.css — Design "Création de Ligne"
+   ============================================= */
+
+/* Base & Arrière-plan global */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative
+}
+
+/* Alignement du titre principal extérieur */
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #7f1d1d;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* Ligne décorative bleue sous le titre h2 */
+h2::after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 70px;
+    background-color: #7f1d1d;
+    margin: 0.8rem auto 0;
+    border-radius: 99px;
+}
+
+/* Transformation du formulaire en Carte Blanche Arrondie */
+.formulaire form {
+    max-width: 480px;
+    margin: 0 auto 5rem;
+    background: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f1f5f9;
+    padding: 2.5rem; /* Espace intérieur pour les champs */
+    box-sizing: border-box;
+    position: relative;
+    /* Crée le bandeau supérieur bleu nuit automatiquement */
+    padding-top: 5.5rem; 
+}
+
+/* Création du bandeau "INFORMATIONS DE TRAJET" en haut du formulaire */
+.formulaire form::before {
+    content: "INFORMATIONS DU PASSAGER";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 1.2rem;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border-radius: 1.4rem 1.4rem 0 0;
+}
+
+/* Suppression des espacements <br> d'origine pour utiliser un espacement CSS moderne */
+.formulaire form br {
+    display: none;
+}
+
+/* Stylisation de tous les champs de saisie (Inputs) */
+.formulaire form input[type="text"],
+.formulaire form input[type="tel"],
+.formulaire form input:not([type="hidden"]) {
+    width: 100%;
+    padding: 1.1rem 1rem;
+    font-size: 0.95rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.75rem;
+    color: #1e293b;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    /* margin-bottom: 1.5rem; */
+    transition: all 0.2s ease;
+}
+
+/* Effet au clic (Focus) sur les champs de saisie */
+.formulaire form div input:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+}
+
+/* Style du texte d'aide à l'intérieur (Placeholder) */
+.formulaire form input::placeholder {
+    color: #94a3b8;
+    opacity: 0.8;
+}
+
+/* Stylisation du bouton Confirmer */
+.formulaire form #submit {
+    width: 100%;
+    background-color: #111827;
+    color: #ffffff;
+    padding: 1.1rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formulaire form #submit:hover {
+    background-color: #0f172a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px #0f172a;
+}
+
+/*Stylisation du bouton de payement*/
+form #Avance {
+    width: 100%;
+    background-color: rgb(7, 126, 7);
+    color: #ffffff;
+    padding: 1.1rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form #Avance:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px  rgb(7, 126, 7);
+}
+
+/*BOITE PAYEMENT AVANCE*/
+.payement{
+    background-color:  #0f172a;
+    height: 700px;
+    /* width: 700px; */
+    /* margin: 50px auto 50px auto ; */
+    padding-top: 30px;
+    display: none;
+    box-shadow: 10px 42px 42px  #0f172a;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    position: absolute;
+    bottom: 5px;
+    left: -5%;
+    z-index: 30;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    position: absolute;
+    top: -10px;
+    left: -40px;
+    right: -40px;
+
+    width: auto;
+   
+}
+
+.payement input{
+    width: 50%;
+    padding: 1.1rem 1rem;
+    font-size: 0.95rem;
+    border: 1px solid #2563eb;
+    border-radius: 0.75rem;
+    color: #2e3f55;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    /* margin-bottom: 1.5rem; Remplace les <br> par une marge propre */
+    transition: all 0.2s ease;
+}
+/* .payement label{margin-top: 100px;} */
+
+/*bouton payer*/
+#btn_retour, #paiement_envoie{
+    /* width: 50%; */
+    background-color: #0f172a;
+    color: #ffffff;
+    /* margin-left: 100px; */
+    padding: 1.1rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* margin-top: 0.5rem; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+#btn_retour{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background: #111827;
+}
+
+#paiement_envoie{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background: #077e07;
+}
+
+#btn_retour:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px #ffffff7c;
+}
+#paiement_envoie:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px #ffffff7c;
+}
+#operateur {
+    width: 100%;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    color: #111827;
+    font-size: 0.875rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    outline: none;
+    transition: all 0.3s;
+}
+#operateur:focus {
+    border-color: #2563eb;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+#operateur option{
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+/*bouton ou*/
+#or{
+    color: rgb(238, 145, 6);
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px;
+}
+
+/*TEXTE ENVOIE REUSSI*/
+#envoie_reussi{
+    color:rgb(7, 126, 7);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0 50px 0;
+}
+
+
+/* PAYMENT */
+/* .contenaireChamp{
+    background: red;
+} */

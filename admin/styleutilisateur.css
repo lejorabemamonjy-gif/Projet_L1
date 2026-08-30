@@ -1,0 +1,102 @@
+/* Titre stylé */
+.blood-title {
+    color:#7f1d1d;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2.25rem;
+    margin:100px
+}
+
+
+/* Conteneur du tableau (Arrondi et Ombre) */
+.table-container {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid #f3f4f6;
+}
+
+/* Structure du tableau */
+.admin-table {
+    width: 100%;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.admin-table thead tr {
+    background-color: #1f2937; /* gray-800 professionnel */
+    color: white;
+}
+
+.admin-table th {
+    padding: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.admin-table td {
+    padding: 1.25rem;
+    color: #974005;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+/* Styles spécifiques au texte */
+.user-name { font-weight: bold; color: #111827; }
+.user-email { font-family: monospace; color: #4b5563; }
+
+/* Effet au survol des lignes */
+.admin-table tbody tr:hover {
+    background-color: #fef2f2;
+    transition: background-color 0.2s;
+}
+
+/* Badges de rôles */
+.badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border: 1px solid;
+}
+
+.badge-admin { background-color: #fef2f2; color: #b91c1c; border-color: #fee2e2; }
+.badge-user { background-color: #eff6ff; color: #1d4ed8; border-color: #dbeafe; }
+
+/* Liens d'actions */
+.action-link { font-size: 0.875rem; font-weight: 600; text-decoration: none; margin-right: 0.75rem; }
+.link-client { color: #3b82f6; position:relative}
+.link-employe { color: #10b981; }
+.link-admin { color: #ef4444; }
+
+.link-client:hover{
+    text-decoration: dashed;
+}
+
+/*BOUTON SUPPPRIMER*/
+#delete{
+    display: inline-block;
+    background-color: #1f2937;
+    color: white !important;
+    padding: 12px 28px;
+    border-radius: 0.75rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+#delete:hover{
+    background-color: #0f172a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*POUR LE JAVASCRIPT*/
+.delete{
+    display: none;
+}

@@ -1,0 +1,132 @@
+/* =============================================
+   style_reservations.css — Gestion des Réservations
+   ============================================= */
+
+/* Fond global de la page */
+body {
+    background-color: #0f172A;
+    font-family: 'Inter', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Style du Titre Principal H2 --- */
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color:#7f1d1d;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/* Ligne décorative bleue sous le titre */
+h2::after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 70px;
+    background-color: #7f1d1d;
+    margin: 0.8rem auto 0;
+    border-radius: 99px;
+}
+
+/* --- Container des Cartes (Gestion de l'alignement) --- */
+/* Pour éviter que les cartes prennent toute la largeur de l'écran */
+body > div:not(.places-wrapper):not(.form-wrapper) {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* --- Style des Cartes de Réservation --- */
+/* Écrase le style en ligne brut 'border:1px solid #ccc...' */
+div[style*="border"] {
+    border: 1px solid #f1f5f9 !important;
+    padding: 1.75rem !important;
+    margin: 0 0 1.5rem 0 !important;
+    background-color: #ffffff;
+    border-radius: 1.25rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Animation discrète au survol de la carte */
+div[style*="border"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* --- Gestion des Textes (Lignes d'informations) --- */
+div[style*="border"] p {
+    font-size: 0.95rem;
+    color: #475569;
+    margin: 0 0 0.75rem 0;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+}
+
+/* Met en gras les intitulés (ex: "Jour :", "Heure :") */
+div[style*="border"] p strong, 
+div[style*="border"] p::first-letter {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+/* --- Enjolivement des États (Status) --- */
+/* Masque le texte brut du statut pour le styliser proprement */
+div[style*="border"] p:nth-of-type(5) {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.35rem 0.75rem;
+    border-radius: 99px;
+    display: inline-flex;
+    width: auto;
+    margin-top: 0.5rem;
+    background-color: #e2e8f0; /* Par défaut gris */
+    color: #475569;
+}
+
+/* --- Le Bouton Annuler (Action destructive douce) --- */
+div[style*="border"] a[href^="annuler.php"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ef4444; /* Rouge moderne */
+    color: #ffffff !important;
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    transition: background-color 0.2s, transform 0.2s;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.15);
+}
+
+div[style*="border"] a[href^="annuler.php"]:hover {
+    background-color: #dc2626;
+    box-shadow: 0 6px 16px rgba(239, 68, 68, 0.25);
+}
+
+/* --- Style du Message d'annulation fixe --- */
+/* Cible le texte rouge injecté par PHP lors d'un trajet annulé */
+div[style*="border"] p[style*="color:red"] {
+    color: #b91c1c !important;
+    background-color: #fee2e2; /* Fond rouge clair pro */
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.75rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-flex;
+    margin-top: 0.5rem;
+    border: 1px solid #fca5a5;
+}
+

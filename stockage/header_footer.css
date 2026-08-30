@@ -1,0 +1,99 @@
+/*STYLE BARRE DE MENU*/
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0f172A;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+header{
+    height: auto;
+    /* display:flex;
+    flex-direction:row; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+
+
+    display: grid;
+    grid-template-columns: 150px auto 150px;
+
+    /* position: fixed;
+    left: 0;
+    right: 0;
+    top: 0; */
+
+    z-index: 200;
+    background: #0f172A;
+}
+header a{
+    color: white;
+    text-decoration:none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: 0.2s;
+    text-align: center;
+}
+
+#logout:hover{
+    background: #e12d4f;;
+}
+
+#login:hover{
+    background: #33ff55;
+}
+header a:hover{
+    background: #252a3575;
+}
+
+header .centrer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+
+    background: #0e1435;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+/* .centrer a{
+    background: #252a35;
+    padding: 5px 10px;
+    border-radius: 10px;
+} */
+
+/*LE PIED DU SITE*/
+.site-footer {
+           
+            color: #d1d5db;
+            margin-top: 4rem;
+            border: 1px solid black;
+            box-shadow: 0px 10px 20px black;
+        }
+        .site-footer__inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 2rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 2.5rem;
+        }
+        .footer-col { display: flex; flex-direction: column; gap: 0.75rem; }
+        .footer-logo { font-size: 1.5rem; font-weight: 900; color: #ffffff; letter-spacing: 0.1em; }
+        .footer-desc { font-size: 0.875rem; color: #9ca3af; line-height: 1.6; margin: 0; }
+        .footer-heading {
+            font-size: 0.7rem; font-weight: 800; text-transform: uppercase;
+            letter-spacing: 0.1em; color: #6b7280; margin: 0 0 0.25rem;
+        }
+        .footer-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+        .footer-link { font-size: 0.875rem; color: #9ca3af; text-decoration: none; transition: color 0.2s; }
+        .footer-link:hover { color: #ffffff; }
+        .site-footer__bottom { border-top: 1px solid #374151; padding: 1.25rem 1.5rem; text-align: center; }
+        .site-footer__bottom p { font-size: 0.8rem; color: #6b7280; margin: 0; }
+
+        @media (max-width: 640px) {
+            .site-footer__inner { grid-template-columns: 1fr; gap: 2rem; padding: 2rem 1.25rem 1.5rem; }
+}

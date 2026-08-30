@@ -1,0 +1,140 @@
+body {
+    background-color: #0f172A;
+    font-family: 'Inter', system-ui, sans-serif;
+    padding-top: 100px
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color:#7f1d1d;
+    margin-bottom: 3rem;
+}
+
+
+h2::after {
+    content: "";
+    display: block;
+    height: 5px;
+    width: 70px;
+    background-color: #7f1d1d;
+    margin: 0.8rem auto 0;
+    border-radius: 99px;
+}
+
+/*SI PAS DE RESERVATION EN COURS*/
+.res-empty{
+    max-width: 700px;
+    margin: 60px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 1.5rem; /* Arrondi 24px identique aux autres pages */
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #f3f4f6;
+    color:#0f172A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+}
+.res-empty p{
+    color: #475569;
+    font-size: 20px;
+    letter-spacing: 3px;
+    
+}
+.res-empty a{
+    display: inline-block;
+    background-color: #1f2937;
+    color: white !important;
+    padding: 12px 28px;
+    border-radius: 0.75rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+.res-empty a:hover {
+    background-color: #000000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*AVEC RESERVATION*/
+.res-card__route h3{
+    color:#475569;
+    font-size: 25px;
+    font-weight: 800;
+    position: relative;
+    left: 500px;
+}
+
+.res-card{margin: 0 0 60px 0}
+.res-card__grid{
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid #f3f4f6; 
+}
+
+.tab-res{
+    width: 100%;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+}
+
+#head th{
+    background-color:#1f2937; /* gray-800 professionnel */
+    color: white;
+    padding: 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+#cellule td{
+    color:#475569;
+    padding: 1.25rem;
+}
+
+/*BOUTON ANNULER RESERVATION*/
+.res-card__actions {
+    display: inline-block;
+    background-color: #1f2937;
+   
+    margin: 25px 0 0 70%;
+    padding: 12px 28px;
+    border-radius: 0.75rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+
+    cursor: pointer;
+}
+.res-card__actions a{
+    text-decoration: none;
+    color: white;
+}
+.res-card__actions:hover {
+    background-color: #0f172a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/*MESSAGE D'ANNULATION*/
+.res-flash{
+    text-align: center;
+    color: rgb(10, 210, 10);
+}
