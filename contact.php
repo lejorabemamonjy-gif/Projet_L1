@@ -175,7 +175,7 @@ $equipes = [
 <div class="contact-page">
 
     <section class="contact-header">
-        <h1 class="contact-main-title">Employés</h1>
+        <h1 class="contact-main-title">Employés Tous de faux info</h1>
         <div class="contact-title-bar"></div>
     </section>
 
